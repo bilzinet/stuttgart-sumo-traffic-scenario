@@ -69,6 +69,41 @@ In your SUMO configuration file, set the FCD output to the named pipe:
 
 ```
 
+```bash filename="simulation/Simulation_workday.sumo.cfg.xml"
+
+# simulation/Simulation_workday.sumo.cfg.xml
+
+<configuration >
+
+	<input>
+		<net-file value="Highway.net.xml"/>
+		<route-files value="routes_workday.rou.xml"/>
+	</input>
+
+	<time>
+		<begin value="0"/>
+		<end value="93600"/>
+		<step-length value="0.5"/>
+	</time>
+
+	<output>
+		<fcd-output value="/tmp/fcd_fifo_workday"/>
+		<tripinfo-output value="tripinfo_workday.xml"/>
+	</output>
+
+	<report>
+		<error-log value="errors_workday.xml"/>
+	</report>
+
+	<gui_only>
+        <start value="true"/>
+        <gui-settings-file value="Gui.settings.xml"/>
+    </gui_only>
+
+</configuration>
+
+```
+
 This tells SUMO to write the FCD output to the named pipe **/path/to/fifo**.
 
 
