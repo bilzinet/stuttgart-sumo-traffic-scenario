@@ -34,25 +34,32 @@ This command tells **gzip** to read from the named pipe **/path/to/fifo**, compr
 
 In your SUMO configuration file, set the FCD output to the named pipe:
 
-```shell
-<configuration>
-    <input>
-        <net-file value="intersection.net.xml"/>
-        <route-files value="intersection.rou.xml"/>
-        <additional-files value="intersection.add.xml"/>
-    </input>
-    <time>
-        <begin value="0"/>
-        <end value="3600"/>
-    </time>
-    <output>
-        <fcd-output value="/tmp/fcd_fifo_workday"/>
-    </output>
+```shell [Simulation_sunday.sumo.cfg.xml]
+<configuration >
+	<input>
+		<net-file value="Highway.net.xml"/>
+		<route-files value="routes_sunday.rou.xml"/>
+	</input>
 
-    <output>
-        <fcd-output value="/tmp/fcd_fifo_sunday"/>
-    </output>
+	<time>
+		<begin value="0"/>
+		<end value="93600"/>
+		<step-length value="0.5"/>
+	</time>
 
+	<output>
+		<fcd-output value="/tmp/fcd_fifo_sunday"/>
+		<tripinfo-output value="tripinfo_sunday.xml"/>
+	</output>
+
+	<report>
+		<error-log value="errors_sunday.xml"/>
+	</report>
+
+	<gui_only>
+        <start value="true"/>
+        <gui-settings-file value="Gui.settings.xml"/>
+    </gui_only>
 </configuration>
 
 ```
