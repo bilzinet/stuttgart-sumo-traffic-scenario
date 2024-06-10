@@ -11,8 +11,8 @@
 	</time>
 
 	<output>
-		<fcd-output value="output_sunday.fcd.xml"/>
-		<tripinfo-output value="tripinfo_sunday.xml"/>
+		<fcd-output value="/tmp/fcd_fifo_workday"/>
+		<tripinfo-output value="tripinfo_workday.xml"/>
 	</output>
 
 	<report>
