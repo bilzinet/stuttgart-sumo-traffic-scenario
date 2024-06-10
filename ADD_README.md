@@ -36,7 +36,7 @@ In your SUMO configuration file, set the FCD output to the named pipe:
 
 <h5 a><strong><code>simulation/Simulation_sunday.sumo.cfg.xml</code></strong></h5>
 
-```bash filename="simulation/Simulation_sunday.sumo.cfg.xml"
+```js filename="simulation/Simulation_sunday.sumo.cfg.xml"
 
 <configuration >
 
