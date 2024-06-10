@@ -20,6 +20,7 @@
 	</report>
 
 	<gui_only>
-		<gui-settings-file value="Gui.settings.xml"/>
-	</gui_only>
+        <start value="true"/>
+        <gui-settings-file value="Gui.settings.xml"/>
+    </gui_only>
 </configuration>

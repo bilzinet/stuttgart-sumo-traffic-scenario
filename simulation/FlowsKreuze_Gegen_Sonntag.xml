@@ -1,4 +1,4 @@
-<flows>
+<routes>
 	<interval begin="0.0" end="3599.0">
 		<flow arrivalLane="current" departLane="random" from="23845853" id="23845853to2978962904std0.0no238" number="65" to="297896290" type="Pkw"/>
 		<flow arrivalLane="current" departLane="random" from="23845853" id="23845853to238458594std0.0no221" number="42" to="23845859" type="Pkw"/>
@@ -668,4 +668,4 @@
 		<flow arrivalLane="current" departLane="random" from="23845858" id="23845858to2978962907std82800.0no989" number="49" to="297896290" type="Lkw"/>
 		<flow arrivalLane="current" departLane="random" from="23845858" id="23845858to1422449177std82800.0no224" number="12" to="142244917" type="Lkw"/>
 	</interval>
-</flows>
+</routes>

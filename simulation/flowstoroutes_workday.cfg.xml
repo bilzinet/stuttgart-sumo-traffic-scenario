@@ -5,7 +5,7 @@
     <input>
         <net-file value="Highway.net.xml"/>
         <additional-files value="vehicle_types.add.xml"/>
-        <flow-files value="FlowsKreuze_Gegen_Werktag.xml FlowsKreuze_Mit_Werktag.xml Flows_AS_Gegen_Werktag.xml Flows_AS_Mit_Werktag.xml Flows_Feuerbach_Werktag.xml"/>
+        <route-files value="FlowsKreuze_Gegen_Werktag.xml, FlowsKreuze_Mit_Werktag.xml, Flows_AS_Gegen_Werktag.xml, Flows_AS_Mit_Werktag.xml, Flows_Feuerbach_Werktag.xml"/>
     </input>
 
     <output>

@@ -5,7 +5,7 @@
     <input>
         <net-file value="Highway.net.xml"/>
         <additional-files value="vehicle_types.add.xml"/>
-        <flow-files value="FlowsKreuze_Gegen_Sonntag.xml FlowsKreuze_Mit_Sonntag.xml Flows_AS_Gegen_Sonntag.xml Flows_AS_Mit_Sonntag.xml Flows_Feuerbach_Sonntag.xml"/>
+        <route-files value="FlowsKreuze_Gegen_Sonntag.xml, FlowsKreuze_Mit_Sonntag.xml, Flows_AS_Gegen_Sonntag.xml, Flows_AS_Mit_Sonntag.xml, Flows_Feuerbach_Sonntag.xml"/>
     </input>
 
     <output>
