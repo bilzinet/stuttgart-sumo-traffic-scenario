@@ -1,20 +1,22 @@
-## Additional instructions to compress simulation output
+# Additional instructions to compress simulation output
 
 SUMO generates a lot of data, especially when using Floating Car Data (FCD) output. FCD output records the position, speed, and other attributes of each vehicle at every time step, which can lead to very large files. To manage the size of these files, you can use a named pipe to compress the output on-the-fly using **gzip**, which significantly reduces the file size without losing any data.
 
 
-### Named Pipe
+## Named Pipe
 
 A named pipe (or FIFO for First In First Out) is a method for inter-process communication. It acts like a file, but data written to it can be read by another process simultaneously. This is useful for streaming data from one process to another, such as from SUMO to **gzip**.
 
 
-### Setting Up Named Pipe with gzip for SUMO
+## Setting Up Named Pipe with gzip for SUMO
 
 1. Create a Named Pipe:
 
 ```shell
+# for workday cfg
 mkfifo /tmp/fcd_fifo_workday
 
+# for sunday cfg
 mkfifo /tmp/fcd_fifo_sunday
 
 ```
@@ -22,8 +24,10 @@ mkfifo /tmp/fcd_fifo_sunday
 2. Start **gzip** to Compress the Named Pipe:
 
 ```shell
+# for workday cfg
 gzip < /tmp/fcd_fifo_workday > ./output_workday.fcd.xml.gz &
 
+# for sunday cfg
 gzip < /tmp/fcd_fifo_sunday > ./output_sunday.fcd.xml.gz &
 
 ```
@@ -108,7 +112,7 @@ In your SUMO configuration file, set the FCD output to the named pipe:
 This tells SUMO to write the FCD output to the named pipe **/path/to/fifo**.
 
 
-### Benefits
+## Benefits
  - Reduced File Size: Compressing the output on-the-fly can drastically reduce the file size.
  - Efficiency: Using a named pipe avoids the need to create large intermediate files before compression.
  - Seamless Integration: The data flows directly from SUMO to **gzip**, streamlining the process.
