@@ -21,7 +21,7 @@ mkfifo /tmp/fcd_fifo_sunday
 
 ```
 
-2. Start **gzip** to Compress the Named Pipe:
+2. Start **gzip** to Compress the Named Pipe: Command to tell **gzip** to read from the named pipe **/path/to/fifo**, compress the data, and write it to **/path/to/output/fcd_output.xml.gz**
 
 ```shell
 # for workday cfg
@@ -32,11 +32,7 @@ gzip < /tmp/fcd_fifo_sunday > ./output_sunday.fcd.xml.gz &
 
 ```
 
-This command tells **gzip** to read from the named pipe **/path/to/fifo**, compress the data, and write it to **/path/to/output/fcd_output.xml.gz**
-
-3. Configure SUMO to Write FCD Output to the Named Pipe:
-
-In your SUMO configuration file, set the FCD output to the named pipe:
+3. Configure SUMO to Write FCD Output to the Named Pipe: In the SUMO configuration file, set the FCD output to the named pipe as below. This tells SUMO to write the FCD output to the named pipe **/path/to/fifo**.
 
 ```bash filename="simulation/Simulation_sunday.sumo.cfg.xml"
 
@@ -108,8 +104,6 @@ In your SUMO configuration file, set the FCD output to the named pipe:
 </configuration>
 
 ```
-
-This tells SUMO to write the FCD output to the named pipe **/path/to/fifo**.
 
 
 ## Benefits
