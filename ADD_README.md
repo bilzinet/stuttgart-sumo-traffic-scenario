@@ -34,7 +34,8 @@ This command tells **gzip** to read from the named pipe **/path/to/fifo**, compr
 
 In your SUMO configuration file, set the FCD output to the named pipe:
 
-#### **`simulation/Simulation_sunday.sumo.cfg.xml`**
+<!-- #### **`simulation/Simulation_sunday.sumo.cfg.xml`** -->
+<h5 a><strong><code>simulation/Simulation_sunday.sumo.cfg.xml</code></strong></h5>
 ```bash
 
 <configuration >
