@@ -1,10 +1,12 @@
 simulation/routes_workday.rou.xml
 simulation/routes_workday.rou.alt.xml
 simulation/output_workday.fcd.xml
+simulation/output_workday.fcd.xml.gz
 simulation/tripinfo_workday.xml
 simulation/errors_workday.xml
 simulation/routes_sunday.rou.xml
 simulation/routes_sunday.rou.alt.xml
 simulation/output_sunday.fcd.xml
+simulation/output_sunday.fcd.xml.gz
 simulation/tripinfo_sunday.xml
 simulation/errors_sunday.xml
